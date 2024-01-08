@@ -25,7 +25,7 @@ export interface IRoom extends Document {
   pricePerNight: number;
   address: String;
   location: ILocation;
-  guestCapcacity: string;
+  guestCapacity: string;
   numOfBeds: number;
   isInternet: boolean;
   isBreakfast: boolean;
@@ -75,7 +75,7 @@ const roomSchema: Schema = new Schema({
     zipcode: String,
     countrys: String,
   },
-  guestCapcacity: {
+  guestCapacity: {
     type: Number,
     required: [true, 'Please enter room guest capacity'],
   },
@@ -150,7 +150,7 @@ const roomSchema: Schema = new Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
-    required: true,
+    required: false,
   },
   createdAt: {
     type: Date,
